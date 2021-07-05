@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D82269314860008F2C1 /* CellTableViewCell.swift */; };
+		30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D83269314860008F2C1 /* CellTableViewCell.xib */; };
+		30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */; };
+		30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */; };
+		30C97D99269342570008F2C1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D98269342570008F2C1 /* Device.swift */; };
 		30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */; };
 		30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B2265DA35A00F65B63 /* BTUtils.swift */; };
 		30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B4265DA39400F65B63 /* BTManager.swift */; };
 		30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B6265DA3C400F65B63 /* BTDevice.swift */; };
-		30D1A1BC265DA52800F65B63 /* NearbyDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1BA265DA52800F65B63 /* NearbyDevicesViewController.swift */; };
-		30D1A1BD265DA52800F65B63 /* NearbyDevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D1A1BB265DA52800F65B63 /* NearbyDevicesViewController.xib */; };
 		30F748FC265D8C2600E8B04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F748FB265D8C2600E8B04A /* AppDelegate.swift */; };
 		30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30F74904265D8C2600E8B04A /* IRUN.xcdatamodeld */; };
 		30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F74907265D8C2900E8B04A /* Assets.xcassets */; };
@@ -22,12 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30C97D82269314860008F2C1 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		30C97D83269314860008F2C1 /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
+		30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
+		30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesTableViewController.xib; sourceTree = "<group>"; };
+		30C97D98269342570008F2C1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
 		30D1A1B2265DA35A00F65B63 /* BTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
 		30D1A1B4265DA39400F65B63 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
 		30D1A1B6265DA3C400F65B63 /* BTDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
-		30D1A1BA265DA52800F65B63 /* NearbyDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDevicesViewController.swift; sourceTree = "<group>"; };
-		30D1A1BB265DA52800F65B63 /* NearbyDevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyDevicesViewController.xib; sourceTree = "<group>"; };
 		30F748F8265D8C2600E8B04A /* IRUN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRUN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F748FB265D8C2600E8B04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F74905265D8C2600E8B04A /* IRUN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRUN.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +55,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30C97D86269316A10008F2C1 /* Nearby Devices */ = {
+			isa = PBXGroup;
+			children = (
+				30C97D83269314860008F2C1 /* CellTableViewCell.xib */,
+				30C97D82269314860008F2C1 /* CellTableViewCell.swift */,
+				30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */,
+				30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */,
+			);
+			path = "Nearby Devices";
+			sourceTree = "<group>";
+		};
+		30C97D97269342380008F2C1 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				30C97D98269342570008F2C1 /* Device.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		30D1A1AF265DA30500F65B63 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				30F748FA265D8C2600E8B04A /* IRUN */,
-				30F748F9265D8C2600E8B04A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,11 +98,14 @@
 				30F748F8265D8C2600E8B04A /* IRUN.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
+				30C97D97269342380008F2C1 /* Device */,
+				30C97D86269316A10008F2C1 /* Nearby Devices */,
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
 				30F748FB265D8C2600E8B04A /* AppDelegate.swift */,
 				30F74907265D8C2900E8B04A /* Assets.xcassets */,
@@ -87,8 +114,7 @@
 				30F74904265D8C2600E8B04A /* IRUN.xcdatamodeld */,
 				30F74912265D8D8600E8B04A /* HomeViewController.swift */,
 				30F74913265D8D8600E8B04A /* HomeViewController.xib */,
-				30D1A1BA265DA52800F65B63 /* NearbyDevicesViewController.swift */,
-				30D1A1BB265DA52800F65B63 /* NearbyDevicesViewController.xib */,
+				30F748F9265D8C2600E8B04A /* Products */,
 			);
 			path = IRUN;
 			sourceTree = "<group>";
@@ -153,7 +179,8 @@
 				30F7490B265D8C2900E8B04A /* LaunchScreen.storyboard in Resources */,
 				30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */,
 				30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */,
-				30D1A1BD265DA52800F65B63 /* NearbyDevicesViewController.xib in Resources */,
+				30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */,
+				30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,12 +193,14 @@
 			files = (
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
+				30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */,
 				30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */,
 				30F748FC265D8C2600E8B04A /* AppDelegate.swift in Sources */,
 				30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */,
-				30D1A1BC265DA52800F65B63 /* NearbyDevicesViewController.swift in Sources */,
+				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,
 				30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */,
+				30C97D99269342570008F2C1 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UserNotifications
 class HomeViewController: UIViewController {
     
     //class DeviceVC: UIViewController {
-        
+    
         enum ViewState: Int {
             case disconnected
             case connected
@@ -25,6 +25,12 @@ class HomeViewController: UIViewController {
             }
         }
         
+    class func newInstance(device: BTDevice) -> HomeViewController {
+        let homeViewController = HomeViewController()
+        homeViewController.device = device
+        return homeViewController
+    }
+    
         @IBOutlet weak var statusLabel: UILabel!
         @IBOutlet weak var blinkSwitch: UISwitch!
         @IBOutlet weak var disconnectButton: UIButton!
