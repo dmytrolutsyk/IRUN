@@ -32,12 +32,12 @@ class HomeViewController: UIViewController {
     }
     
         @IBOutlet weak var statusLabel: UILabel!
-        @IBOutlet weak var blinkSwitch: UISwitch!
         @IBOutlet weak var disconnectButton: UIButton!
         @IBOutlet weak var serialLabel: UILabel!
+        @IBOutlet weak var blinkSwitch: UISwitch!
         @IBOutlet weak var speedSlider: UISlider!
         
-        var viewState: ViewState = .disconnected {
+    var viewState: ViewState = .disconnected {
             didSet {
                 switch viewState {
                 case .disconnected:
@@ -78,6 +78,7 @@ class HomeViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.title = "Appareil connecté"
             
             viewState = .disconnected
         }

@@ -76,10 +76,6 @@ class DevicesTableViewController: UITableViewController {
         device.connect()
         let vc = HomeViewController.newInstance(device: device)
         self.navigationController?.pushViewController(vc, animated: true)
-        /*let vc = presentingViewController.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        vc.device = device
-        device.connect()
-        show(vc, sender: self)*/
     }
     
 }

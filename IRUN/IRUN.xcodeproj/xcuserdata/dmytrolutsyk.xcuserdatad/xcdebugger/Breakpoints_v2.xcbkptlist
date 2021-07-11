@@ -3,4 +3,114 @@
    uuid = "FDE5298D-8DAE-42C1-93C6-64B9A9E4E96B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IRUN/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - c1957354ca22c26a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.statusLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - 7352a579ffbc1276"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.statusLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - 2168372ae05b5afb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.statusLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - b63c3b5c782f72c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.statusLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - 1fa6da2c235bc689"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; IRUN.HomeViewController"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "A616CC7C-E022-4B1C-A91C-A8B89A0C2A62 - ad8d090cc6046923"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IRUN.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;IRUN.HomeViewController&gt;"
+                  moduleName = "IRUN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrolutsyk/Desktop/IRUN/IRUN/IRUN/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

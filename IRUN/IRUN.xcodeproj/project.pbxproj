@@ -11,7 +11,6 @@
 		30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D83269314860008F2C1 /* CellTableViewCell.xib */; };
 		30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */; };
 		30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */; };
-		30C97D99269342570008F2C1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D98269342570008F2C1 /* Device.swift */; };
 		30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */; };
 		30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B2265DA35A00F65B63 /* BTUtils.swift */; };
 		30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B4265DA39400F65B63 /* BTManager.swift */; };
@@ -29,7 +28,6 @@
 		30C97D83269314860008F2C1 /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
 		30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesTableViewController.xib; sourceTree = "<group>"; };
-		30C97D98269342570008F2C1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
 		30D1A1B2265DA35A00F65B63 /* BTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
 		30D1A1B4265DA39400F65B63 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
@@ -66,14 +64,6 @@
 			path = "Nearby Devices";
 			sourceTree = "<group>";
 		};
-		30C97D97269342380008F2C1 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				30C97D98269342570008F2C1 /* Device.swift */,
-			);
-			path = Device;
-			sourceTree = "<group>";
-		};
 		30D1A1AF265DA30500F65B63 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +94,6 @@
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
-				30C97D97269342380008F2C1 /* Device */,
 				30C97D86269316A10008F2C1 /* Nearby Devices */,
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
 				30F748FB265D8C2600E8B04A /* AppDelegate.swift */,
@@ -200,7 +189,6 @@
 				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,
 				30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */,
-				30C97D99269342570008F2C1 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
