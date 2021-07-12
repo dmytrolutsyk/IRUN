@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30A0D2BC269CD94A00ED9FB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2BA269CD94A00ED9FB1 /* LoginViewController.swift */; };
+		30A0D2BD269CD94A00ED9FB1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A0D2BB269CD94A00ED9FB1 /* LoginViewController.xib */; };
+		30A0D2BF269CDAE000ED9FB1 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2BE269CDAE000ED9FB1 /* LoginFactory.swift */; };
+		30A0D2C1269CDAE800ED9FB1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2C0269CDAE800ED9FB1 /* LoginService.swift */; };
+		30A0D2C4269CE13600ED9FB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2C3269CE13600ED9FB1 /* User.swift */; };
+		30A0D2C6269CE14C00ED9FB1 /* UserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */; };
+		30A0D2C8269CE16900ED9FB1 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2C7269CE16900ED9FB1 /* UserService.swift */; };
+		30A0D2CB269CE1F000ED9FB1 /* SignupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2CA269CE1F000ED9FB1 /* SignupFactory.swift */; };
+		30A0D2CD269CE1F700ED9FB1 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2CC269CE1F700ED9FB1 /* SignupService.swift */; };
+		30A0D2D0269CE21800ED9FB1 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D2CE269CE21800ED9FB1 /* SignupViewController.swift */; };
+		30A0D2D1269CE21800ED9FB1 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A0D2CF269CE21800ED9FB1 /* SignupViewController.xib */; };
 		30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D82269314860008F2C1 /* CellTableViewCell.swift */; };
 		30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D83269314860008F2C1 /* CellTableViewCell.xib */; };
 		30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */; };
@@ -24,6 +35,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30A0D2BA269CD94A00ED9FB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30A0D2BB269CD94A00ED9FB1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		30A0D2BE269CDAE000ED9FB1 /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginFactory.swift; path = "../../../../Projet-Annuel/iOS /iOS/Login/LoginFactory.swift"; sourceTree = "<group>"; };
+		30A0D2C0269CDAE800ED9FB1 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginService.swift; path = "../../../../Projet-Annuel/iOS /iOS/Login/LoginService.swift"; sourceTree = "<group>"; };
+		30A0D2C3269CE13600ED9FB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
+		30A0D2C7269CE16900ED9FB1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		30A0D2CA269CE1F000ED9FB1 /* SignupFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupFactory.swift; path = "../../../../Projet-Annuel/iOS /iOS/Signup/SignupFactory.swift"; sourceTree = "<group>"; };
+		30A0D2CC269CE1F700ED9FB1 /* SignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupService.swift; path = "../../../../Projet-Annuel/iOS /iOS/Signup/SignupService.swift"; sourceTree = "<group>"; };
+		30A0D2CE269CE21800ED9FB1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		30A0D2CF269CE21800ED9FB1 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		30C97D82269314860008F2C1 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		30C97D83269314860008F2C1 /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
 		30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +75,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30A0D2B9269CD91F00ED9FB1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D2BE269CDAE000ED9FB1 /* LoginFactory.swift */,
+				30A0D2C0269CDAE800ED9FB1 /* LoginService.swift */,
+				30A0D2BA269CD94A00ED9FB1 /* LoginViewController.swift */,
+				30A0D2BB269CD94A00ED9FB1 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		30A0D2C2269CE12400ED9FB1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D2C3269CE13600ED9FB1 /* User.swift */,
+				30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */,
+				30A0D2C7269CE16900ED9FB1 /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		30A0D2C9269CE1D200ED9FB1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D2CA269CE1F000ED9FB1 /* SignupFactory.swift */,
+				30A0D2CC269CE1F700ED9FB1 /* SignupService.swift */,
+				30A0D2CE269CE21800ED9FB1 /* SignupViewController.swift */,
+				30A0D2CF269CE21800ED9FB1 /* SignupViewController.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		30C97D86269316A10008F2C1 /* Nearby Devices */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +148,9 @@
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
+				30A0D2C9269CE1D200ED9FB1 /* SignUp */,
+				30A0D2C2269CE12400ED9FB1 /* User */,
+				30A0D2B9269CD91F00ED9FB1 /* Login */,
 				30C97D86269316A10008F2C1 /* Nearby Devices */,
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
 				30F748FB265D8C2600E8B04A /* AppDelegate.swift */,
@@ -167,8 +224,10 @@
 			files = (
 				30F7490B265D8C2900E8B04A /* LaunchScreen.storyboard in Resources */,
 				30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */,
+				30A0D2BD269CD94A00ED9FB1 /* LoginViewController.xib in Resources */,
 				30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */,
 				30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */,
+				30A0D2D1269CE21800ED9FB1 /* SignupViewController.xib in Resources */,
 				30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,14 +239,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A0D2D0269CE21800ED9FB1 /* SignupViewController.swift in Sources */,
+				30A0D2C4269CE13600ED9FB1 /* User.swift in Sources */,
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
+				30A0D2CD269CE1F700ED9FB1 /* SignupService.swift in Sources */,
 				30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */,
+				30A0D2BF269CDAE000ED9FB1 /* LoginFactory.swift in Sources */,
 				30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */,
 				30F748FC265D8C2600E8B04A /* AppDelegate.swift in Sources */,
 				30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */,
+				30A0D2C1269CDAE800ED9FB1 /* LoginService.swift in Sources */,
+				30A0D2C6269CE14C00ED9FB1 /* UserFactory.swift in Sources */,
 				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
+				30A0D2C8269CE16900ED9FB1 /* UserService.swift in Sources */,
+				30A0D2CB269CE1F000ED9FB1 /* SignupFactory.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,
+				30A0D2BC269CD94A00ED9FB1 /* LoginViewController.swift in Sources */,
 				30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
