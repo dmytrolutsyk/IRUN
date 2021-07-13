@@ -37,6 +37,9 @@
                     <rect key="frame" x="179" y="576" width="73" height="30"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <state key="normal" title="Connexion"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="Tj0-eA-Ko2"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKd-Ud-ce9">
                     <rect key="frame" x="158" y="639" width="115" height="30"/>

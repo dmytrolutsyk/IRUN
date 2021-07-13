@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func login(_ sender: Any) {
+        print("tapped")
         
         if(username.text == "" || password.text == "" ) {
             let alertController = UIAlertController(title: "Attention", message: "Veuillez remplir tous les champs", preferredStyle: .alert)
@@ -45,15 +46,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             self.loginService.login(user: user) { (success) in
                 
-                print("\(success)")
             }
-            let DevicesTableViewController = DevicesTableViewController()
-            self.navigationController?.pushViewController(DevicesTableViewController, animated: true)
             
+            let del = 1.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + del) {
+                
+                if ERR == "Login OK"{
+                    loginUser = self.username.text
+                    let home = DevicesTableViewController()
+                    self.navigationController?.pushViewController(home, animated: true)
+                }
+                else{
+                    let alertController = UIAlertController(title: "Impossible de se conncter", message: "Veuillez vérifier vos identifiants", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+            }
         }
     }
     
     @IBAction func Signup(_ sender: UIButton) {
+        print("taped")
         let signup = SignupViewController()
         self.navigationController?.pushViewController(signup, animated: true)
     }
