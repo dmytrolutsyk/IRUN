@@ -68,24 +68,34 @@ class SignupViewController: UIViewController {
                 print("\(success)")
             }
             
-            let refreshAlert = UIAlertController(title: "Confirmation", message: "Le compte \(username) a bien été crée", preferredStyle: UIAlertController.Style.alert)
-            
-            refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
-                if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                    appDelegate.window?.rootViewController?.dismiss(animated: true, completion: nil)
-                    (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
+            let del = 1.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + del) {
+                
+                if ERR == "Signup OK"{
+                    let refreshAlert = UIAlertController(title: "Confirmation", message: "Le compte \(username) a bien été crée", preferredStyle: UIAlertController.Style.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+                        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                            appDelegate.window?.rootViewController?.dismiss(animated: true, completion: nil)
+                            (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
+                        }
+                    }))
+                    
+                    self.present(refreshAlert, animated: true, completion: nil)
                 }
-            }))
-            
-            present(refreshAlert, animated: true, completion: nil)
+                else{
+                    let alertController = UIAlertController(title: "Impossible de créer un compte", message: "Veuillez utiliser un autre identifiant", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                
+            }
+          
             
         }
     }
     
 }
-
-
-
-
-
 
