@@ -7,6 +7,8 @@
 
 import Foundation
 
+var loginUser:String?
+
 class User: CustomStringConvertible {
  
     
