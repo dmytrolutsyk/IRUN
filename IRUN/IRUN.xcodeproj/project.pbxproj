@@ -37,6 +37,7 @@
 		30F7490B265D8C2900E8B04A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F74909265D8C2900E8B04A /* LaunchScreen.storyboard */; };
 		30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F74912265D8D8600E8B04A /* HomeViewController.swift */; };
 		30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F74913265D8D8600E8B04A /* HomeViewController.xib */; };
+		CF6257D2269F954700CF4736 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6257D1269F954700CF4736 /* SessionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		30F7490C265D8C2900E8B04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30F74912265D8D8600E8B04A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30F74913265D8D8600E8B04A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CF6257D1269F954700CF4736 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,11 +180,15 @@
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
+
 				30B4951F269E3C33002B96EE /* Courses */,
 				30A0D2C9269CE1D200ED9FB1 /* SignUp */,
 				30A0D2C2269CE12400ED9FB1 /* User */,
 				30A0D2B9269CD91F00ED9FB1 /* Login */,
 				30C97D86269316A10008F2C1 /* Nearby Devices */,
+
+				CF6257D0269F953A00CF4736 /* Services */,
+
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
 				30F748FB265D8C2600E8B04A /* AppDelegate.swift */,
 				30F74907265D8C2900E8B04A /* Assets.xcassets */,
@@ -194,6 +200,14 @@
 				30F748F9265D8C2600E8B04A /* Products */,
 			);
 			path = IRUN;
+			sourceTree = "<group>";
+		};
+		CF6257D0269F953A00CF4736 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF6257D1269F954700CF4736 /* SessionData.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +291,7 @@
 				30A0D2C4269CE13600ED9FB1 /* User.swift in Sources */,
 				30F44FED269F9102001F1275 /* SignupFactory.swift in Sources */,
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
+				CF6257D2269F954700CF4736 /* SessionData.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
 				30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */,
 				30B49521269E3C56002B96EE /* Course.swift in Sources */,
