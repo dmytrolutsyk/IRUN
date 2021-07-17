@@ -24,12 +24,8 @@ class NearbyDevicesVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Appeils disponible:";
         
-        toolbarItems = [
-            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(customView: scanLabel),
-            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        ]
         updateStatusLabel()
         
         manager.delegate = self
