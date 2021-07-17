@@ -3,8 +3,8 @@ import Foundation
 class SignupService {
     
       func signup(user: User, completion: @escaping (Bool) -> Void) -> Void {
-           guard let signupURL = URL(string: "http://localhost:3000/signup") else {
-            //guard let signupURL = URL(string: "https://blabla.herokuapp.com/signup") else {
+          // guard let signupURL = URL(string: "http://localhost:3000/signup") else {
+        guard let signupURL = URL(string: "https://irun-esgi.herokuapp.com/user/signUp") else {
                  return
              }
             
