@@ -143,12 +143,13 @@ extension BTDevice: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("Device: updated value for \(characteristic.descriptors)")
+        print("Device: updated value for \(characteristic)")
         
         if characteristic.uuid == BTUUIDs.espData, let d = characteristic.value {
-            var data = String(data: d, encoding: .utf8)
-            if let data = data {
-                delegate?.deviceDataChanged(value: data)
+            let data = String(data: d, encoding: .utf8)
+            if let test = data {
+                delegate?.deviceDataChanged(value: test)
+                print("dataesp: \(test)")
             }
         }
 
