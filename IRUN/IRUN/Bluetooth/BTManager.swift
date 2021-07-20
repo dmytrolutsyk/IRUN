@@ -35,7 +35,7 @@ class BTManager: NSObject {
             }
             print("Manager: scan state set to \(scanning)")
             if (scanning) {
-                manager.scanForPeripherals(withServices: [BTUUIDs.blinkService], options: nil)
+                manager.scanForPeripherals(withServices: [BTUUIDs.blinkService, BTUUIDs.espData], options: nil)
             } else {
                 manager.stopScan()
             }

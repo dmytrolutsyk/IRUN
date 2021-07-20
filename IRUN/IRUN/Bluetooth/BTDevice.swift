@@ -15,6 +15,7 @@ protocol BTDeviceDelegate: class {
     func deviceBlinkChanged(value: Bool)
     func deviceSpeedChanged(value: Int)
     func deviceSerialChanged(value: String)
+    func deviceDataChanged(value: String)
     func deviceDisconnected()
 
 }
@@ -24,8 +25,10 @@ class BTDevice: NSObject {
     private let manager: CBCentralManager
     private var blinkChar: CBCharacteristic?
     private var speedChar: CBCharacteristic?
+    private var espDataChar: CBCharacteristic?
     private var _blink: Bool = false
     private var _speed: Int = 5
+    private var espData: String = "nil"
     
     weak var delegate: BTDeviceDelegate?
     var blink: Bool {
@@ -106,10 +109,11 @@ extension BTDevice: CBPeripheralDelegate {
                 peripheral.discoverCharacteristics([BTUUIDs.infoSerial], for: $0)
             } else if $0.uuid == BTUUIDs.blinkService {
                 peripheral.discoverCharacteristics([BTUUIDs.blinkOn,BTUUIDs.blinkSpeed], for: $0)
+            } else if $0.uuid == BTUUIDs.espData {
+                peripheral.discoverCharacteristics([BTUUIDs.espData], for: $0)
             } else {
                 peripheral.discoverCharacteristics(nil, for: $0)
             }
-            
         }
         print()
     }
@@ -128,7 +132,10 @@ extension BTDevice: CBPeripheralDelegate {
                 peripheral.readValue(for: $0)
             } else if $0.uuid == BTUUIDs.infoSerial {
                 peripheral.readValue(for: $0)
+            } else if $0.uuid == BTUUIDs.espData {
+                peripheral.readValue(for: $0)
             }
+            
         }
         print()
         
@@ -136,8 +143,15 @@ extension BTDevice: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("Device: updated value for \(characteristic)")
+        print("Device: updated value for \(characteristic.descriptors)")
         
+        if characteristic.uuid == BTUUIDs.espData, let d = characteristic.value {
+            var data = String(data: d, encoding: .utf8)
+            if let data = data {
+                delegate?.deviceDataChanged(value: data)
+            }
+        }
+
         if characteristic.uuid == blinkChar?.uuid, let b = characteristic.value?.parseBool() {
             _blink = b
             delegate?.deviceBlinkChanged(value: b)

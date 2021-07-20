@@ -103,6 +103,10 @@ extension HomeViewController: BTDeviceDelegate {
         serialLabel.text = value
     }
     
+    func deviceDataChanged(value: String) {
+        serialLabel.text = value
+    }
+    
     func deviceSpeedChanged(value: Int) {
         speedSlider.value = Float(value)
     }
