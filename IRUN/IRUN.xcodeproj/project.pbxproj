@@ -27,10 +27,8 @@
 		30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B2265DA35A00F65B63 /* BTUtils.swift */; };
 		30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B4265DA39400F65B63 /* BTManager.swift */; };
 		30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B6265DA3C400F65B63 /* BTDevice.swift */; };
-		30F44FE9269F9076001F1275 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FE8269F9076001F1275 /* LoginService.swift */; };
 		30F44FEB269F9089001F1275 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FEA269F9089001F1275 /* SignupService.swift */; };
 		30F44FED269F9102001F1275 /* SignupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FEC269F9101001F1275 /* SignupFactory.swift */; };
-		30F44FEF269F911B001F1275 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FEE269F911B001F1275 /* LoginFactory.swift */; };
 		30F748FC265D8C2600E8B04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F748FB265D8C2600E8B04A /* AppDelegate.swift */; };
 		30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30F74904265D8C2600E8B04A /* IRUN.xcdatamodeld */; };
 		30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F74907265D8C2900E8B04A /* Assets.xcassets */; };
@@ -47,7 +45,7 @@
 		30A0D2BB269CD94A00ED9FB1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		30A0D2C3269CE13600ED9FB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
-		30A0D2C7269CE16900ED9FB1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		30A0D2C7269CE16900ED9FB1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = ../User/UserService.swift; sourceTree = "<group>"; };
 		30A0D2CE269CE21800ED9FB1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		30A0D2CF269CE21800ED9FB1 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		30B49520269E3C56002B96EE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -63,10 +61,8 @@
 		30D1A1B2265DA35A00F65B63 /* BTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
 		30D1A1B4265DA39400F65B63 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
 		30D1A1B6265DA3C400F65B63 /* BTDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
-		30F44FE8269F9076001F1275 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		30F44FEA269F9089001F1275 /* SignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		30F44FEC269F9101001F1275 /* SignupFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupFactory.swift; sourceTree = "<group>"; };
-		30F44FEE269F911B001F1275 /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		30F748F8265D8C2600E8B04A /* IRUN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRUN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F748FB265D8C2600E8B04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F74905265D8C2600E8B04A /* IRUN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRUN.xcdatamodel; sourceTree = "<group>"; };
@@ -101,22 +97,10 @@
 		30A0D2B9269CD91F00ED9FB1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				30F44FEE269F911B001F1275 /* LoginFactory.swift */,
-				30F44FE8269F9076001F1275 /* LoginService.swift */,
 				30A0D2BA269CD94A00ED9FB1 /* LoginViewController.swift */,
 				30A0D2BB269CD94A00ED9FB1 /* LoginViewController.xib */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		30A0D2C2269CE12400ED9FB1 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				30A0D2C3269CE13600ED9FB1 /* User.swift */,
-				30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */,
-				30A0D2C7269CE16900ED9FB1 /* UserService.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		30A0D2C9269CE1D200ED9FB1 /* SignUp */ = {
@@ -186,10 +170,9 @@
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
+				CF0362F426AB735E00154F39 /* UserView */,
+				CF0362EF26AB69E900154F39 /* Modeles */,
 				30B4951F269E3C33002B96EE /* Courses */,
-				30A0D2C9269CE1D200ED9FB1 /* SignUp */,
-				30A0D2C2269CE12400ED9FB1 /* User */,
-				30A0D2B9269CD91F00ED9FB1 /* Login */,
 				30C97D86269316A10008F2C1 /* Nearby Devices */,
 				CF6257D0269F953A00CF4736 /* Services */,
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
@@ -205,9 +188,28 @@
 			path = IRUN;
 			sourceTree = "<group>";
 		};
+		CF0362EF26AB69E900154F39 /* Modeles */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D2C3269CE13600ED9FB1 /* User.swift */,
+			);
+			path = Modeles;
+			sourceTree = "<group>";
+		};
+		CF0362F426AB735E00154F39 /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D2B9269CD91F00ED9FB1 /* Login */,
+				30A0D2C9269CE1D200ED9FB1 /* SignUp */,
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
 		CF6257D0269F953A00CF4736 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				30A0D2C5269CE14C00ED9FB1 /* UserFactory.swift */,
+				30A0D2C7269CE16900ED9FB1 /* UserService.swift */,
 				CF6257D1269F954700CF4736 /* SessionData.swift */,
 			);
 			path = Services;
@@ -305,10 +307,8 @@
 				30B4952E269E4292002B96EE /* TableViewCell.swift in Sources */,
 				30A0D2C6269CE14C00ED9FB1 /* UserFactory.swift in Sources */,
 				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
-				30F44FEF269F911B001F1275 /* LoginFactory.swift in Sources */,
 				30A0D2C8269CE16900ED9FB1 /* UserService.swift in Sources */,
 				30F44FEB269F9089001F1275 /* SignupService.swift in Sources */,
-				30F44FE9269F9076001F1275 /* LoginService.swift in Sources */,
 				30B4952A269E4264002B96EE /* CoursesTableViewController.swift in Sources */,
 				CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,

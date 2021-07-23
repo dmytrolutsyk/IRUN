@@ -13,7 +13,7 @@ class SignupViewController: UIViewController {
     @IBOutlet var passwordEdit: UITextField!
     @IBOutlet var passwordconfirmEdit: UITextField!
     
-    let signupService: SignupService = SignupService()
+    let userService: UserService = UserService()
     
     
     
@@ -64,14 +64,19 @@ class SignupViewController: UIViewController {
             
             let user = User(username: username, password: password)
             
-            self.signupService.signup(user: user) { (success) in
-                print("\(success)")
+            self.userService.newUser(user: user) { (success) in
+                print("create account success  : \(success)")
+                if success {
+                    print("success create account will naviguate to Home")
+                    let home = DevicesTableViewController()
+                    self.navigationController?.pushViewController(home, animated: true)
+                } else { self.showPopUpErrorAccount() }
             }
             
             let del = 1.0
             DispatchQueue.main.asyncAfter(deadline: .now() + del) {
                 
-                if ERR == "Signup OK"{
+                /*if ERR == "Signup OK"{
                     let refreshAlert = UIAlertController(title: "Confirmation", message: "Le compte \(username) a bien été crée", preferredStyle: UIAlertController.Style.alert)
                     
                     refreshAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
@@ -89,12 +94,21 @@ class SignupViewController: UIViewController {
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
                     
-                }
+                }*/
                 
             }
           
             
         }
+        
+
+    }
+    
+    private func showPopUpErrorAccount() {
+        let alertController = UIAlertController(title: "Impossible de créer un compte", message: "Veuillez utiliser un autre identifiant", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

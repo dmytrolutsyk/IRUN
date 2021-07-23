@@ -9,26 +9,6 @@ import Foundation
 
 class UserFactory {
      
-        
-    var email: String
-    var password: String
-    var username: String
-    var type: String
-    var phone: String
-    var city: String
- 
-    
-    init(email: String, password: String, type: String, username: String, phone: String, city: String) {
-        
-        self.email = email
-        self.password = password
-        self.username = username
-        self.type = type
-        self.phone = phone
-        self.city = city
-     
-    }
-        
     
     static func userFrom(user: [String: Any]) -> User? {
         guard    let email = user["email"] as? String,
@@ -53,6 +33,23 @@ class UserFactory {
             "phone": user.phone ?? "defaultphone",
             "city": user.city ?? "defaultcity",
             "usertype": user.type ?? "defaulttype"
+        ]
+    }
+    
+    static func responseLoginFrom(dictionary: [String: Any]) -> User? {
+           guard let username = dictionary["username"] as? String,
+                 let password = dictionary["password"] as? String
+        else {
+                   return nil
+           }
+        let user = User(username: username, password: password)
+           return user
+       }
+    
+    static func dictionaryLoginFrom(user: User) -> [String: Any] {
+        return [
+         "username": user.username,
+         "password": user.password,
         ]
     }
 }

@@ -11,7 +11,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
     
-    let loginService: LoginService = LoginService()
+    let userService: UserService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,27 +50,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             let user = User( email: "", password: password.text ?? "", type: "", username: username.text , phone: "", city: "" )
             
-            self.loginService.login(user: user) { (success) in
-                
-            }
-            
-            let del = 1.0
-            DispatchQueue.main.asyncAfter(deadline: .now() + del) {
-                
-                if ERR == "Login OK"{
-                    loginUser = self.username.text
+            self.userService.login(user: user) { (success) in
+                if success {
+                    print("success login will naviguate to Home")
                     let home = DevicesTableViewController()
                     self.navigationController?.pushViewController(home, animated: true)
-                }
-                else{
-                    let alertController = UIAlertController(title: "Impossible de se conncter", message: "Veuillez vérifier vos identifiants", preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    
-                }
+                } else { self.showPopUpErrorLogin() }
             }
         }
+    }
+    
+    private func showPopUpErrorLogin() {
+        let alertController = UIAlertController(title: "Impossible de se conncter", message: "Veuillez vérifier vos identifiants", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func Signup(_ sender: UIButton) {

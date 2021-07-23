@@ -11,6 +11,7 @@ class SessionData {
     static func setToken(token: String) {
         let userSettings = UserDefaults.standard
         userSettings.set(token, forKey: "Token")
+        print("have set token with : \(token)")
     }
     
     static func getToken() -> String? {

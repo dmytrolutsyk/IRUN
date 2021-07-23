@@ -1,6 +1,6 @@
 import Foundation
 
-class SignupService {
+/*class SignupService {
     
       func signup(user: User, completion: @escaping (Bool) -> Void) -> Void {
           // guard let signupURL = URL(string: "http://localhost:3000/signup") else {
@@ -34,6 +34,6 @@ class SignupService {
          }
 
 
-}
+}*/
 
 
