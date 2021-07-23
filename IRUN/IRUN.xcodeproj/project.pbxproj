@@ -38,6 +38,8 @@
 		30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F74912265D8D8600E8B04A /* HomeViewController.swift */; };
 		30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F74913265D8D8600E8B04A /* HomeViewController.xib */; };
 		CF6257D2269F954700CF4736 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6257D1269F954700CF4736 /* SessionData.swift */; };
+		CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */; };
+		CF98B5F826A76BCF0021CFA3 /* DetailCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		30F74912265D8D8600E8B04A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30F74913265D8D8600E8B04A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CF6257D1269F954700CF4736 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
+		CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCourseViewController.swift; sourceTree = "<group>"; };
+		CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCourseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				30B49529269E4264002B96EE /* CoursesTableViewController.xib */,
 				30B4952C269E4292002B96EE /* TableViewCell.swift */,
 				30B4952D269E4292002B96EE /* TableViewCell.xib */,
+				CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */,
+				CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -180,15 +186,12 @@
 		30F748FA265D8C2600E8B04A /* IRUN */ = {
 			isa = PBXGroup;
 			children = (
-
 				30B4951F269E3C33002B96EE /* Courses */,
 				30A0D2C9269CE1D200ED9FB1 /* SignUp */,
 				30A0D2C2269CE12400ED9FB1 /* User */,
 				30A0D2B9269CD91F00ED9FB1 /* Login */,
 				30C97D86269316A10008F2C1 /* Nearby Devices */,
-
 				CF6257D0269F953A00CF4736 /* Services */,
-
 				30D1A1AF265DA30500F65B63 /* Bluetooth */,
 				30F748FB265D8C2600E8B04A /* AppDelegate.swift */,
 				30F74907265D8C2900E8B04A /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */,
 				30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */,
 				30A0D2D1269CE21800ED9FB1 /* SignupViewController.xib in Resources */,
+				CF98B5F826A76BCF0021CFA3 /* DetailCourseViewController.xib in Resources */,
 				30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +310,7 @@
 				30F44FEB269F9089001F1275 /* SignupService.swift in Sources */,
 				30F44FE9269F9076001F1275 /* LoginService.swift in Sources */,
 				30B4952A269E4264002B96EE /* CoursesTableViewController.swift in Sources */,
+				CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,
 				30A0D2BC269CD94A00ED9FB1 /* LoginViewController.swift in Sources */,
 				30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */,
