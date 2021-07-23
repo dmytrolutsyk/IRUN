@@ -15,10 +15,10 @@ class UserService {
   
     
     func newUser(user: User, completion: @escaping (Bool) -> Void) -> Void {
-        guard let usertURL = URL(string: "https://webhook.site/a382090f-c7b9-4522-988c-19a595fc9549") else {
-            return
+        guard let userURL = URL(string: "https://irun-esgi.herokuapp.com/user/signUp") else {
+                 return
         }
-        var request = URLRequest(url: usertURL)
+        var request = URLRequest(url: userURL)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: UserFactory.dictionaryFrom(user: user), options: .fragmentsAllowed)
         request.setValue("application/json", forHTTPHeaderField: "content-type")

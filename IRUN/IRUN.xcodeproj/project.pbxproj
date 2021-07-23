@@ -27,8 +27,6 @@
 		30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B2265DA35A00F65B63 /* BTUtils.swift */; };
 		30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B4265DA39400F65B63 /* BTManager.swift */; };
 		30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B6265DA3C400F65B63 /* BTDevice.swift */; };
-		30F44FEB269F9089001F1275 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FEA269F9089001F1275 /* SignupService.swift */; };
-		30F44FED269F9102001F1275 /* SignupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F44FEC269F9101001F1275 /* SignupFactory.swift */; };
 		30F748FC265D8C2600E8B04A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F748FB265D8C2600E8B04A /* AppDelegate.swift */; };
 		30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30F74904265D8C2600E8B04A /* IRUN.xcdatamodeld */; };
 		30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F74907265D8C2900E8B04A /* Assets.xcassets */; };
@@ -61,8 +59,6 @@
 		30D1A1B2265DA35A00F65B63 /* BTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
 		30D1A1B4265DA39400F65B63 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
 		30D1A1B6265DA3C400F65B63 /* BTDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
-		30F44FEA269F9089001F1275 /* SignupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
-		30F44FEC269F9101001F1275 /* SignupFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupFactory.swift; sourceTree = "<group>"; };
 		30F748F8265D8C2600E8B04A /* IRUN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRUN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F748FB265D8C2600E8B04A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F74905265D8C2600E8B04A /* IRUN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IRUN.xcdatamodel; sourceTree = "<group>"; };
@@ -106,8 +102,6 @@
 		30A0D2C9269CE1D200ED9FB1 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				30F44FEC269F9101001F1275 /* SignupFactory.swift */,
-				30F44FEA269F9089001F1275 /* SignupService.swift */,
 				30A0D2CE269CE21800ED9FB1 /* SignupViewController.swift */,
 				30A0D2CF269CE21800ED9FB1 /* SignupViewController.xib */,
 			);
@@ -117,7 +111,6 @@
 		30B4951F269E3C33002B96EE /* Courses */ = {
 			isa = PBXGroup;
 			children = (
-				30B49520269E3C56002B96EE /* Course.swift */,
 				30B49528269E4264002B96EE /* CoursesTableViewController.swift */,
 				30B49529269E4264002B96EE /* CoursesTableViewController.xib */,
 				30B4952C269E4292002B96EE /* TableViewCell.swift */,
@@ -191,6 +184,7 @@
 		CF0362EF26AB69E900154F39 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				30B49520269E3C56002B96EE /* Course.swift */,
 				30A0D2C3269CE13600ED9FB1 /* User.swift */,
 			);
 			path = Modeles;
@@ -295,7 +289,6 @@
 			files = (
 				30A0D2D0269CE21800ED9FB1 /* SignupViewController.swift in Sources */,
 				30A0D2C4269CE13600ED9FB1 /* User.swift in Sources */,
-				30F44FED269F9102001F1275 /* SignupFactory.swift in Sources */,
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
 				CF6257D2269F954700CF4736 /* SessionData.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
@@ -308,7 +301,6 @@
 				30A0D2C6269CE14C00ED9FB1 /* UserFactory.swift in Sources */,
 				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
 				30A0D2C8269CE16900ED9FB1 /* UserService.swift in Sources */,
-				30F44FEB269F9089001F1275 /* SignupService.swift in Sources */,
 				30B4952A269E4264002B96EE /* CoursesTableViewController.swift in Sources */,
 				CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,
