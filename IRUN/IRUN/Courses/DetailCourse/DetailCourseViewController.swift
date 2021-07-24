@@ -18,14 +18,20 @@ class DetailCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
-//        self.mockData()
+        self.mockData()
         self.drawCourse()
+        self.setRegionMap()
     }
     
     static func newInstance(course: Course) -> DetailCourseViewController {
         let detailCourse = DetailCourseViewController()
         detailCourse.course = course
         return detailCourse
+    }
+    
+    private func setRegionMap() {
+        guard let start = self.listOfCoordinate.first else { return }
+        self.mapView.setRegion(MKCoordinateRegion(center: start, latitudinalMeters: 1000, longitudinalMeters: 1000), animated: true)
     }
     
     private func mockData() {
@@ -36,14 +42,13 @@ class DetailCourseViewController: UIViewController {
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665778, longitude: 2.841284))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.666301, longitude: 2.840769))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.666353, longitude: 2.840146))
-        course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665033, longitude: 2.840410))
         self.course = course
     }
     
     private func drawCourse() {
         var isFirstLocation = true
         var previousLoaction = CLLocationCoordinate2D()
-        
+        self.setMKPointOfStartAndEnd()
         for location in self.listOfCoordinate {
             if isFirstLocation {
                 isFirstLocation = false
@@ -56,7 +61,18 @@ class DetailCourseViewController: UIViewController {
     }
     
     private func setMKPointOfStartAndEnd() {
+        guard let startLocation = self.listOfCoordinate.first,
+              let endLocation = self.listOfCoordinate.last else { return }
         
+        let startRunAnnotation = MKPointAnnotation()
+        startRunAnnotation.title = "Start"
+        startRunAnnotation.coordinate = startLocation
+        
+        let endRunAnnotation = MKPointAnnotation()
+        endRunAnnotation.title = "End"
+        endRunAnnotation.coordinate = endLocation
+        
+        self.mapView.addAnnotations([startRunAnnotation, endRunAnnotation])
     }
     
     private func drawBetween2Coord(firstLocation: CLLocationCoordinate2D, secondLocation: CLLocationCoordinate2D) {
@@ -109,4 +125,17 @@ extension DetailCourseViewController: MKMapViewDelegate {
     
     return renderer
   }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "school_annotation_view")
+        if annotationView == nil {
+            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "school_annotation_view")
+            pinAnnotationView.canShowCallout = true // pour ne pas afficher une popup
+            pinAnnotationView.pinTintColor = .red
+            annotationView = pinAnnotationView
+        } else {
+            annotationView!.annotation = annotation
+        }
+        return annotationView
+    }
 }
