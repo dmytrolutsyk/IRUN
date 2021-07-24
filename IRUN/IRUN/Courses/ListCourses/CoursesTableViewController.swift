@@ -48,6 +48,11 @@ class CoursesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailView = DetailCourseViewController.newInstance(course: self.courses[indexPath.row])
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
+    
     
 }
 
