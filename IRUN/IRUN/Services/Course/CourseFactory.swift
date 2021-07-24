@@ -27,11 +27,13 @@ class CourseFactory {
     
     static func listOfCourseFrom(dict: [String:Any]) -> [Course] {
         var listOfCourse = [Course]()
-        guard let courses = dict["courses"] as? [Any] else { return listOfCourse }
+        guard let courses = dict["courses"] as? [Any] else {
+            return listOfCourse
+        }
         for course in courses {
             guard let dictCourse = course as? [String:Any],
-                  let course = courseFrom(dict: dictCourse) else { continue }
-            listOfCourse.append(course)
+                  let courseObject = courseFrom(dict: dictCourse) else { continue }
+            listOfCourse.append(courseObject)
         }
         return listOfCourse
     }
@@ -45,15 +47,16 @@ class CourseFactory {
               let listOfCoordinate = dict["GPSCoordinate"] as? [Any],
               let id = dict["_id"] as? String else { return nil }
         var GPSCoordinates = [CLLocationCoordinate2D]()
+
         for coord in listOfCoordinate {
-            guard let dictCoord = coord as? [String:Any],
+            guard let dictCoord = coord as? NSDictionary,
                   let coordinate = coordinateFrom(dict: dictCoord) else { continue }
             GPSCoordinates.append(coordinate)
         }
         return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates)
     }
     
-    static func coordinateFrom(dict: [String:Any]) -> CLLocationCoordinate2D? {
+    static func coordinateFrom(dict: NSDictionary) -> CLLocationCoordinate2D? {
         guard let latitude = dict["latitude"] as? Double,
         let longitude = dict["longitude"] as? Double else { return nil }
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -61,9 +64,7 @@ class CourseFactory {
     
     static func dateFrom(string: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        // dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ"
         return dateFormatter.date(from: string)
     }
 }
