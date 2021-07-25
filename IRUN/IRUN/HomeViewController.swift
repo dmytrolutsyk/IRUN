@@ -46,6 +46,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var serialLabel: UILabel!
+    @IBOutlet weak var tempValue: UILabel!
+    @IBOutlet weak var humValue: UILabel!
+    @IBOutlet weak var pulseValue: UILabel!
     
     var viewState: ViewState = .disconnected {
         didSet {
@@ -55,16 +58,28 @@ class HomeViewController: UIViewController {
                
                 disconnectButton.isEnabled = false
                 serialLabel.isHidden = true
+                tempValue.isHidden = true
+                humValue.isHidden = true
+                pulseValue.isHidden = true
             case .connected:
                 statusLabel.text = "Probing..."
            
                 disconnectButton.isEnabled = true
                 serialLabel.isHidden = true
+                tempValue.isHidden = true
+                humValue.isHidden = true
+                pulseValue.isHidden = true
             case .ready:
                 statusLabel.text = "Ready"
                 disconnectButton.isEnabled = true
                 serialLabel.isHidden = false
+                tempValue.isHidden = false
+                humValue.isHidden = false
+                pulseValue.isHidden = false
                 serialLabel.text = device?.serial ?? "reading..."
+                tempValue.text = device?.tmp ?? "reading..."
+                humValue.text = device?.hum ?? "reading..."
+                pulseValue.text = device?.pulse ?? "reading..."
             }
         }
     }
@@ -91,8 +106,16 @@ extension HomeViewController: BTDeviceDelegate {
         serialLabel.text = value
     }
     
-    func deviceDataChanged(value: String) {
-        serialLabel.text = value
+    func deviceDataTMPChanged(value: String) {
+        tempValue.text = value
+    }
+    
+    func deviceDataPULSEChanged(value: String) {
+        pulseValue.text = value
+    }
+    
+    func deviceDataHUMChanged(value: String) {
+        tempValue.text = value
     }
     
     func deviceConnected() {

@@ -9,11 +9,13 @@ import Foundation
 import CoreBluetooth
 
 
-protocol BTDeviceDelegate: class {
+protocol BTDeviceDelegate: AnyObject {
     func deviceConnected()
     func deviceReady()
     func deviceSerialChanged(value: String)
-    func deviceDataChanged(value: String)
+    func deviceDataTMPChanged(value: String)
+    func deviceDataPULSEChanged(value: String)
+    func deviceDataHUMChanged(value: String)
     func deviceDisconnected()
 
 }
@@ -37,6 +39,9 @@ class BTDevice: NSObject {
         return peripheral.identifier.description
     }
     private(set) var serial: String?
+    private(set) var tmp: String?
+    private(set) var pulse: String?
+    private(set) var hum: String?
     
     init(peripheral: CBPeripheral, manager: CBCentralManager) {
         self.peripheral = peripheral
@@ -58,7 +63,7 @@ extension BTDevice {
     // these are called from BTManager, do not call directly
     
     func connectedCallback() {
-        peripheral.discoverServices([BTUUIDs.blinkService, BTUUIDs.infoService])
+        peripheral.discoverServices([BTUUIDs.EspService, BTUUIDs.infoService])
         delegate?.deviceConnected()
     }
     
@@ -118,24 +123,24 @@ extension BTDevice: CBPeripheralDelegate {
         print("Device: updated value for \(characteristic)")
         
         if characteristic.uuid == BTUUIDs.espTMP, let d = characteristic.value {
-            let data = String(data: d, encoding: .utf8)
-            if let test = data {
-                delegate?.deviceDataChanged(value: test)
-                print("ESP TEMP: \(test)")
+            tmp = String(data: d, encoding: .utf8)
+            if let tmp = tmp {
+                delegate?.deviceDataTMPChanged(value: tmp)
+                print("ESP TEMP: \(tmp)")
             }
         }
         if characteristic.uuid == BTUUIDs.espPULSE, let d = characteristic.value {
-            let data = String(data: d, encoding: .utf8)
-            if let test = data {
-                delegate?.deviceDataChanged(value: test)
-                print("ESP PULSE: \(test)")
+            pulse = String(data: d, encoding: .utf8)
+            if let pulse = pulse {
+                delegate?.deviceDataPULSEChanged(value: pulse)
+                print("ESP PULSE: \(pulse)")
             }
         }
         if characteristic.uuid == BTUUIDs.espHUM, let d = characteristic.value {
-            let data = String(data: d, encoding: .utf8)
-            if let test = data {
-                delegate?.deviceDataChanged(value: test)
-                print("ESP HUM: \(test)")
+            hum = String(data: d, encoding: .utf8)
+            if let hum = hum {
+                delegate?.deviceDataHUMChanged(value: hum)
+                print("ESP HUM: \(hum)")
             }
         }
         if characteristic.uuid == BTUUIDs.infoSerial, let d = characteristic.value {
@@ -146,3 +151,4 @@ extension BTDevice: CBPeripheralDelegate {
         }
     }
 }
+
