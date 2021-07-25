@@ -60,13 +60,6 @@ class HomeViewController: UIViewController {
                 disconnectButton.isEnabled = true
                 serialLabel.isHidden = false
                 speedSlider.isEnabled = true
-                
-                if let b = device?.blink {
-                    blinkSwitch.isOn = b
-                }
-                if let s = device?.speed {
-                    speedSlider.value = Float(s)
-                }
                 serialLabel.text = device?.serial ?? "reading..."
             }
         }
@@ -86,15 +79,6 @@ class HomeViewController: UIViewController {
     @IBAction func disconnectAction(_ sender: Any) {
         device?.disconnect()
         goBack()
-    }
-    
-    @IBAction func blinkChanged(_ sender: Any) {
-        device?.blink = blinkSwitch.isOn
-    }
-    
-    
-    @IBAction func speedChanged(_ sender: UISlider) {
-        device?.speed = Int(speedSlider.value)
     }
 }
 
