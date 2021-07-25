@@ -12,8 +12,6 @@ import CoreBluetooth
 protocol BTDeviceDelegate: class {
     func deviceConnected()
     func deviceReady()
-    func deviceBlinkChanged(value: Bool)
-    func deviceSpeedChanged(value: Int)
     func deviceSerialChanged(value: String)
     func deviceDataChanged(value: String)
     func deviceDisconnected()
@@ -109,7 +107,6 @@ extension BTDevice: CBPeripheralDelegate {
             } else if $0.uuid == BTUUIDs.espHUM {
                 peripheral.readValue(for: $0)
             }
-            
             
         }
         print()
