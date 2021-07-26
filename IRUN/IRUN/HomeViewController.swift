@@ -69,6 +69,10 @@ class HomeViewController: UIViewController {
                 tempValue.isHidden = true
                 humValue.isHidden = true
                 pulseValue.isHidden = true
+                serialLabel.text = device?.serial ?? "reading..."
+                tempValue.text = device?.tmp ?? "reading..."
+                humValue.text = device?.hum ?? "reading..."
+                pulseValue.text = device?.pulse ?? "reading..."
             case .ready:
                 statusLabel.text = "Ready"
                 disconnectButton.isEnabled = true
@@ -76,10 +80,7 @@ class HomeViewController: UIViewController {
                 tempValue.isHidden = false
                 humValue.isHidden = false
                 pulseValue.isHidden = false
-                serialLabel.text = device?.serial ?? "reading..."
-                tempValue.text = device?.tmp ?? "reading..."
-                humValue.text = device?.hum ?? "reading..."
-                pulseValue.text = device?.pulse ?? "reading..."
+                
             }
         }
     }
@@ -115,7 +116,7 @@ extension HomeViewController: BTDeviceDelegate {
     }
     
     func deviceDataHUMChanged(value: String) {
-        tempValue.text = value
+        humValue.text = value
     }
     
     func deviceConnected() {
