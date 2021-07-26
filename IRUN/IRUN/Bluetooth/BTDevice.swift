@@ -105,12 +105,16 @@ extension BTDevice: CBPeripheralDelegate {
             
              if $0.uuid == BTUUIDs.infoSerial {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espTMP {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espPULSE {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espHUM {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             }
             
         }
