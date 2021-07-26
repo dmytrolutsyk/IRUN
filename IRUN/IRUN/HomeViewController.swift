@@ -109,6 +109,8 @@ extension HomeViewController: BTDeviceDelegate {
     
     func deviceDataTMPChanged(value: String) {
         tempValue.text = value
+        print("chnage: \(value)")
+
     }
     
     func deviceDataPULSEChanged(value: String) {

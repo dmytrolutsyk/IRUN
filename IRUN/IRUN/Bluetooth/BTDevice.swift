@@ -98,6 +98,7 @@ extension BTDevice: CBPeripheralDelegate {
         print()
     }
     
+    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         print("Device: discovered characteristics")
         service.characteristics?.forEach {
@@ -105,12 +106,16 @@ extension BTDevice: CBPeripheralDelegate {
             
              if $0.uuid == BTUUIDs.infoSerial {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espTMP {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espPULSE {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.espHUM {
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             }
             
         }
@@ -118,7 +123,7 @@ extension BTDevice: CBPeripheralDelegate {
         
         delegate?.deviceReady()
     }
-    
+
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         print("Device: updated value for \(characteristic)")
         
