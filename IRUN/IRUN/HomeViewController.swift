@@ -54,29 +54,25 @@ class HomeViewController: UIViewController {
         didSet {
             switch viewState {
             case .disconnected:
-                statusLabel.text = "Disconnected"
+                statusLabel.text = "Deconnecté"
                
                 disconnectButton.isEnabled = false
-                serialLabel.isHidden = true
                 tempValue.isHidden = true
                 humValue.isHidden = true
                 pulseValue.isHidden = true
             case .connected:
-                statusLabel.text = "Probing..."
+                statusLabel.text = "Detection ..."
            
                 disconnectButton.isEnabled = true
-                serialLabel.isHidden = true
                 tempValue.isHidden = true
                 humValue.isHidden = true
                 pulseValue.isHidden = true
-                serialLabel.text = device?.serial ?? "reading..."
                 tempValue.text = device?.tmp ?? "reading..."
                 humValue.text = device?.hum ?? "reading..."
                 pulseValue.text = device?.pulse ?? "reading..."
             case .ready:
-                statusLabel.text = "Ready"
+                statusLabel.text = "Connecté"
                 disconnectButton.isEnabled = true
-                serialLabel.isHidden = false
                 tempValue.isHidden = false
                 humValue.isHidden = false
                 pulseValue.isHidden = false
