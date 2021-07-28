@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
     class func newInstance(device: BTDevice) -> HomeViewController {
         let homeViewController = HomeViewController()
         homeViewController.device = device
-        RunningService.shared.setDevice(device: device)
         return homeViewController
     }
     
@@ -94,7 +93,10 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func disconnectAction(_ sender: Any) {
-        RunningService.shared.endCourse()
+        guard let device = self.device else {return}
+        RunningService.shared.setDevice(device: device)
+        let home = RunningViewController()
+        self.navigationController?.pushViewController(home, animated: true)
         /*
         device?.disconnect()
         goBack()*/

@@ -23,20 +23,27 @@ class RunningService {
     
     private var temp: Double?
     private var humidity: Double?
+    private var pulse: Double?
     
     private var isRunning = false
         
     init() {
-        self.course = Course(_id: "", duration: 0, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [])
+        self.course = Course(_id: "", duration: 0, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [], listPulse: [])
     }
     
     func startCourse() {
         print("start course")
-        self.course = Course(_id: "", duration: 0, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [])
+        self.course = Course(_id: "", duration: 0, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [], listPulse: [])
         isRunning = true
+        self.remplissageDataCourse()
+    }
+    
+    private func remplissageDataCourse() {
         self.remplissageHumidityEveryMinute()
         self.remplissageTemperatureEveryMinute()
+        self.remplissagePulseEveryMinute()
     }
+    
     func addCoordinateToCourse(coord: CLLocationCoordinate2D) {
         if isRunning {
             self.course.coordinates.append(coord)
@@ -61,6 +68,22 @@ class RunningService {
                 self.course.listOfHumidity.append(humidity)
             } else {
                 print("stop repeats remplissage humidity")
+                timer.invalidate()
+            }
+        }
+    }
+    
+    private func remplissagePulseEveryMinute() {
+        Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) {timer in
+            if self.isRunning {
+                guard let pulse = self.pulse else {
+                    print("no pulse available")
+                    return
+                }
+                print("add pulse to course : \(pulse)")
+                self.course.listOfPulse.append(pulse)
+            } else {
+                print("stop repeats remplissage pulse")
                 timer.invalidate()
             }
         }
@@ -93,23 +116,27 @@ class RunningService {
 extension RunningService: BTDeviceDelegate {
     
     func deviceDataTMPChanged(value: String) {
-        print("update temp")
         guard let temperature = Double(value) else {
             print("error cast temp")
             return
         }
         self.temp = temperature
-        print("update temp: \(temperature)")
     }
     
     func deviceDataHUMChanged(value: String) {
-        print("update humidity")
         guard let humidity = Double(value) else {
             print("error cast humidity")
             return
         }
         self.humidity = humidity
-        print("update humidity: \(humidity)")
+    }
+    
+    func deviceDataPULSEChanged(value: String) {
+        guard let pulse = Double(value) else {
+            print("error casting pulse value")
+            return
+        }
+        self.pulse = pulse
     }
     
     func deviceConnected() {
@@ -121,10 +148,6 @@ extension RunningService: BTDeviceDelegate {
     }
     
     func deviceSerialChanged(value: String) {
-        
-    }
-    
-    func deviceDataPULSEChanged(value: String) {
         
     }
     
