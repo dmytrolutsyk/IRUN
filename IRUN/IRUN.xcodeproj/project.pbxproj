@@ -17,8 +17,6 @@
 		30B49521269E3C56002B96EE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B49520269E3C56002B96EE /* Course.swift */; };
 		30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D82269314860008F2C1 /* CellTableViewCell.swift */; };
 		30C97D85269314860008F2C1 /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D83269314860008F2C1 /* CellTableViewCell.xib */; };
-		30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */; };
-		30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */; };
 		30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */; };
 		30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B2265DA35A00F65B63 /* BTUtils.swift */; };
 		30D1A1B5265DA39400F65B63 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1A1B4265DA39400F65B63 /* BTManager.swift */; };
@@ -35,9 +33,12 @@
 		CF03630826AB9FED00154F39 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF03630626AB9FED00154F39 /* CourseTableViewCell.xib */; };
 		CF164D8526ABACC00092B7FC /* CoursesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF164D8326ABACC00092B7FC /* CoursesTableViewController.xib */; };
 		CF164D8826ABAD140092B7FC /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164D8226ABACC00092B7FC /* CoursesTableViewController.swift */; };
+		CF5A57B926B1A002006FC6F1 /* RunService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A57B826B1A002006FC6F1 /* RunService.swift */; };
 		CF6257D2269F954700CF4736 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6257D1269F954700CF4736 /* SessionData.swift */; };
 		CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */; };
 		CF98B5F826A76BCF0021CFA3 /* DetailCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */; };
+		CFBB46C926B0B16900EA41A9 /* ListNearbyDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB46C726B0B16900EA41A9 /* ListNearbyDevicesViewController.swift */; };
+		CFBB46CA26B0B16900EA41A9 /* ListNearbyDevicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBB46C826B0B16900EA41A9 /* ListNearbyDevicesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +52,6 @@
 		30B49520269E3C56002B96EE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		30C97D82269314860008F2C1 /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		30C97D83269314860008F2C1 /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
-		30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
-		30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesTableViewController.xib; sourceTree = "<group>"; };
 		30D1A1B0265DA32800F65B63 /* BTUUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
 		30D1A1B2265DA35A00F65B63 /* BTUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
 		30D1A1B4265DA39400F65B63 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
@@ -71,9 +70,12 @@
 		CF03630626AB9FED00154F39 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
 		CF164D8226ABACC00092B7FC /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		CF164D8326ABACC00092B7FC /* CoursesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesTableViewController.xib; sourceTree = "<group>"; };
+		CF5A57B826B1A002006FC6F1 /* RunService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunService.swift; sourceTree = "<group>"; };
 		CF6257D1269F954700CF4736 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 		CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCourseViewController.swift; sourceTree = "<group>"; };
 		CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCourseViewController.xib; sourceTree = "<group>"; };
+		CFBB46C726B0B16900EA41A9 /* ListNearbyDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNearbyDevicesViewController.swift; sourceTree = "<group>"; };
+		CFBB46C826B0B16900EA41A9 /* ListNearbyDevicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListNearbyDevicesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +128,8 @@
 			children = (
 				30C97D83269314860008F2C1 /* CellTableViewCell.xib */,
 				30C97D82269314860008F2C1 /* CellTableViewCell.swift */,
-				30C97D8F2693206E0008F2C1 /* DevicesTableViewController.swift */,
-				30C97D902693206E0008F2C1 /* DevicesTableViewController.xib */,
+				CFBB46C726B0B16900EA41A9 /* ListNearbyDevicesViewController.swift */,
+				CFBB46C826B0B16900EA41A9 /* ListNearbyDevicesViewController.xib */,
 			);
 			path = "Nearby Devices";
 			sourceTree = "<group>";
@@ -243,6 +245,7 @@
 				CF0362FD26AB91A200154F39 /* Course */,
 				CF0362FC26AB919D00154F39 /* User */,
 				CF6257D1269F954700CF4736 /* SessionData.swift */,
+				CF5A57B826B1A002006FC6F1 /* RunService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,10 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F7490B265D8C2900E8B04A /* LaunchScreen.storyboard in Resources */,
+				CFBB46CA26B0B16900EA41A9 /* ListNearbyDevicesViewController.xib in Resources */,
 				30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */,
 				30A0D2BD269CD94A00ED9FB1 /* LoginViewController.xib in Resources */,
 				30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */,
-				30C97D922693206E0008F2C1 /* DevicesTableViewController.xib in Resources */,
 				30A0D2D1269CE21800ED9FB1 /* SignupViewController.xib in Resources */,
 				CF98B5F826A76BCF0021CFA3 /* DetailCourseViewController.xib in Resources */,
 				CF03630826AB9FED00154F39 /* CourseTableViewCell.xib in Resources */,
@@ -328,11 +331,12 @@
 				CF164D8826ABAD140092B7FC /* CoursesTableViewController.swift in Sources */,
 				30A0D2D0269CE21800ED9FB1 /* SignupViewController.swift in Sources */,
 				30A0D2C4269CE13600ED9FB1 /* User.swift in Sources */,
+				CF5A57B926B1A002006FC6F1 /* RunService.swift in Sources */,
 				CF0362FF26AB91B800154F39 /* CourseService.swift in Sources */,
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
 				CF6257D2269F954700CF4736 /* SessionData.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
-				30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */,
+				CFBB46C926B0B16900EA41A9 /* ListNearbyDevicesViewController.swift in Sources */,
 				30B49521269E3C56002B96EE /* Course.swift in Sources */,
 				CF0362FA26AB807A00154F39 /* CourseFactory.swift in Sources */,
 				30D1A1B7265DA3C400F65B63 /* BTDevice.swift in Sources */,

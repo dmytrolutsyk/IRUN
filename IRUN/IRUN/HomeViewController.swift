@@ -94,11 +94,13 @@ class HomeViewController: UIViewController {
         self.title = "Appareil connecté"
         
         viewState = .disconnected
+        RunService.shared.startCourse()
     }
 
     @IBAction func disconnectAction(_ sender: Any) {
-        device?.disconnect()
-        goBack()
+        let course = RunService.shared.endCourse()
+        /* device?.disconnect()
+        goBack() */
     }
 }
 

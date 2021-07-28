@@ -68,7 +68,7 @@ class SignupViewController: UIViewController {
                 print("create account success  : \(success)")
                 if success {
                     print("success create account will naviguate to Home")
-                    let home = DevicesTableViewController()
+                    let home = ListNearbyDevicesViewController()
                     self.navigationController?.pushViewController(home, animated: true)
                 } else { self.showPopUpErrorAccount() }
             }

@@ -124,9 +124,10 @@ extension BTDevice: CBPeripheralDelegate {
         
         if characteristic.uuid == BTUUIDs.espTMP, let d = characteristic.value {
             tmp = String(data: d, encoding: .utf8)
-            if let tmp = tmp {
-                delegate?.deviceDataTMPChanged(value: tmp)
-                print("ESP TEMP: \(tmp)")
+            if let temperature = tmp {
+                delegate?.deviceDataTMPChanged(value: temperature)
+                print("ESP TEMP: \(temperature)")
+                NotificationCenter.default.post(name: .temperatureDataUpdate, object: temperature)
             }
         }
         if characteristic.uuid == BTUUIDs.espPULSE, let d = characteristic.value {
@@ -138,9 +139,10 @@ extension BTDevice: CBPeripheralDelegate {
         }
         if characteristic.uuid == BTUUIDs.espHUM, let d = characteristic.value {
             hum = String(data: d, encoding: .utf8)
-            if let hum = hum {
-                delegate?.deviceDataHUMChanged(value: hum)
-                print("ESP HUM: \(hum)")
+            if let humidity = hum {
+                delegate?.deviceDataHUMChanged(value: humidity)
+                print("ESP HUM: \(humidity)")
+                NotificationCenter.default.post(name: .levelHumidityUpdate, object: humidity)
             }
         }
         if characteristic.uuid == BTUUIDs.infoSerial, let d = characteristic.value {

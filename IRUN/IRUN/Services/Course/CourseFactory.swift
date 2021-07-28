@@ -53,7 +53,7 @@ class CourseFactory {
                   let coordinate = coordinateFrom(dict: dictCoord) else { continue }
             GPSCoordinates.append(coordinate)
         }
-        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates)
+        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates, listHumidity: [], listTemperature: [])
     }
     
     static func coordinateFrom(dict: NSDictionary) -> CLLocationCoordinate2D? {
