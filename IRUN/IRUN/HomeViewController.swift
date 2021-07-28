@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     class func newInstance(device: BTDevice) -> HomeViewController {
         let homeViewController = HomeViewController()
         homeViewController.device = device
+        RunningService.shared.setDevice(device: device)
         return homeViewController
     }
     

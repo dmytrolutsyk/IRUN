@@ -82,6 +82,10 @@ class RunningService {
         }
     }
     
+    func setDevice(device: BTDevice) {
+        self.device = device
+    }
+    
     
 }
 
