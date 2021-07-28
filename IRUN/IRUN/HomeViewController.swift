@@ -88,7 +88,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Appareil connecté"
-        let _ = RunningService.shared.endCourse()
+        let _ = RunningService.shared.startCourse()
         viewState = .disconnected
     }
 
