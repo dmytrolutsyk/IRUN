@@ -26,8 +26,9 @@ class ListNearbyDevicesViewController: UIViewController {
             self.handleEmptyList()
         }
     }
-    //@IBOutlet var scanLabel: UILabel!
+    
     @IBOutlet var scanLabel: UILabel!
+    //@IBOutlet var scanLabel: UILabel!
     
     private func handleEmptyList() {
         if self.devices.isEmpty {
@@ -98,12 +99,17 @@ extension ListNearbyDevicesViewController: UITableViewDelegate, UITableViewDataS
 
 extension ListNearbyDevicesViewController: BTManagerDelegate {
     func didChangeState(state: CBManagerState) {
+        print("did change state ")
         devices = manager.devices
         updateStatusLabel()
+        print("count devices : \(devices.count)")
+
     }
     
     func didDiscover(device: BTDevice) {
+        print("did discover bt")
         devices = manager.devices
+        print("count devices : \(devices.count)")
     }
     
     func didEnableScan(on: Bool) {
