@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MapKit
 
-class RunningViewController: UIViewController {
+class RunningViewController: UIViewController, MKMapViewDelegate {
     
     private var isRunning = false {
         didSet {
@@ -16,7 +17,8 @@ class RunningViewController: UIViewController {
             else { self.setImgToStart() }
         }
     }
-
+    
+    var locationManager: CLLocationManager?
 
     @IBOutlet var titleLabel: UILabel!
     
@@ -31,6 +33,16 @@ class RunningViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setImgToStart()
+        
+        // Ask permission if not for localisation
+        if CLLocationManager.locationServicesEnabled() {
+            let locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            self.locationManager = locationManager
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -52,6 +64,11 @@ class RunningViewController: UIViewController {
 
     }
     
+    private func publishLocation(coordinate: CLLocationCoordinate2D) {
+        print("publish location")
+        RunningService.shared.updateLocation(coord: coordinate)
+    }
+    
     private func startStopRunning() {
         if isRunning {
             // Terminer la course
@@ -68,17 +85,24 @@ class RunningViewController: UIViewController {
         }
         self.isRunning = !self.isRunning
     }
-    
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension RunningViewController: CLLocationManagerDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        guard let location = userLocation.location else {
+            return
+        }
+        let coord = location.coordinate
+        print("function update location : \(location.coordinate.latitude)")
+        self.publishLocation(coordinate: coord)
     }
-    */
-
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //self.locationManager?.stopUpdatingLocation() // Arrete la geoloc ---> 1 seul la position GPS
+        guard let location = locations.last else {
+            return
+        }
+        print("other function update location : \(location.coordinate.latitude)")
+    }
 }

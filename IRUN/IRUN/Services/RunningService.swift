@@ -44,7 +44,13 @@ class RunningService {
         self.remplissagePulseEveryMinute()
     }
     
-    func addCoordinateToCourse(coord: CLLocationCoordinate2D) {
+    func publishLocation(coordinate: CLLocationCoordinate2D) {
+        if isRunning {
+            self.course.coordinates.append(coordinate)
+        }
+    }
+    
+    func updateLocation(coord: CLLocationCoordinate2D) {
         if isRunning {
             self.course.coordinates.append(coord)
         }
