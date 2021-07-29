@@ -44,9 +44,21 @@ class RunningService {
         self.remplissagePulseEveryMinute()
     }
     
+    private func mockData() {
+        // let course = Course(_id: "0", duration: 26, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [], listPulse: [])
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.848667, longitude: 2.395196))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.849036, longitude: 2.391670))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.850018, longitude: 2.385404))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.849728, longitude: 2.379319))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.846906, longitude: 2.383022))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.847468, longitude: 2.387146))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.849333, longitude: 2.389509))
+
+    }
+    
     func publishLocation(coordinate: CLLocationCoordinate2D) {
         if isRunning {
-            self.course.coordinates.append(coordinate)
+            // self.course.coordinates.append(coordinate)
         }
     }
     
@@ -60,6 +72,7 @@ class RunningService {
         print("end course")
         isRunning = false
         self.course.endDate = Date()
+        self.mockData()
         return self.course
     }
     
