@@ -30,7 +30,7 @@ class CourseFactory {
     
     static func listOfCourseFrom(dict: [String:Any]) -> [Course] {
         var listOfCourse = [Course]()
-        guard let courses = dict["courses"] as? [Any] else {
+        guard let courses = dict["runnings"] as? [Any] else {
             return listOfCourse
         }
         for course in courses {

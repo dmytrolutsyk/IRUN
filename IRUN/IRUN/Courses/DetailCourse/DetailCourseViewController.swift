@@ -18,7 +18,6 @@ class DetailCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
-        self.mockData()
         self.drawCourse()
         self.setRegionMap()
     }
