@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-YW-zbR">
-                    <rect key="frame" x="0.0" y="772" width="414" height="30"/>
+                    <rect key="frame" x="160" y="772" width="94" height="30"/>
                     <state key="normal" title="Deconnexion"/>
                     <connections>
                         <action selector="disconnectAction:" destination="-1" eventType="touchUpInside" id="ytV-XU-VaJ"/>
@@ -113,7 +113,6 @@
                     <rect key="frame" x="0.0" y="523" width="414" height="30"/>
                     <state key="normal" title="Run"/>
                     <connections>
-                        <action selector="goToRunning:" destination="-1" eventType="touchDown" id="VAu-T8-SqT"/>
                         <action selector="goToRunningView:" destination="-1" eventType="touchUpInside" id="8tf-e7-B4T"/>
                     </connections>
                 </button>
@@ -123,13 +122,14 @@
             <constraints>
                 <constraint firstItem="qCf-qB-GOm" firstAttribute="top" secondItem="L9G-EJ-ZGE" secondAttribute="bottom" constant="26" id="2l5-Ed-up7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EEG-FU-7Gq" secondAttribute="trailing" id="3Hx-FZ-IGt"/>
-                <constraint firstItem="hPI-YW-zbR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4DQ-YW-cMv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hPI-YW-zbR" secondAttribute="trailing" constant="160" id="3iE-2a-IHj"/>
                 <constraint firstItem="4ZN-Mb-Uae" firstAttribute="baseline" secondItem="Vry-UY-B5n" secondAttribute="baseline" id="4YG-Ah-JBD"/>
                 <constraint firstAttribute="trailing" secondItem="L9G-EJ-ZGE" secondAttribute="trailing" constant="134" id="6ps-x3-w79"/>
                 <constraint firstItem="4UB-IG-iRM" firstAttribute="leading" secondItem="4ZN-Mb-Uae" secondAttribute="trailing" constant="27" id="81A-8E-hYH"/>
                 <constraint firstItem="L9G-EJ-ZGE" firstAttribute="leading" secondItem="qCf-qB-GOm" secondAttribute="leading" id="8lr-BO-o2l"/>
                 <constraint firstItem="EEG-FU-7Gq" firstAttribute="top" secondItem="Vry-UY-B5n" secondAttribute="bottom" constant="130" id="Aw9-Yk-8KW"/>
                 <constraint firstItem="toA-XK-XHD" firstAttribute="baseline" secondItem="Hfp-7T-EuI" secondAttribute="baseline" id="DLO-2V-F8e"/>
+                <constraint firstItem="hPI-YW-zbR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="160" id="Fb3-sV-Fpx"/>
                 <constraint firstItem="L9G-EJ-ZGE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="241" id="GG7-Fv-mqb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4ex-dk-tRJ" secondAttribute="trailing" constant="115" id="I8i-l1-Itt"/>
                 <constraint firstItem="W9g-mT-qZr" firstAttribute="top" secondItem="toA-XK-XHD" secondAttribute="bottom" constant="25" id="IBf-9K-CwZ"/>
@@ -140,7 +140,6 @@
                 <constraint firstItem="L9G-EJ-ZGE" firstAttribute="leading" secondItem="Hfp-7T-EuI" secondAttribute="trailing" constant="39" id="Z9G-DN-6lu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hPI-YW-zbR" secondAttribute="bottom" constant="60" id="aTe-Hl-Shy"/>
                 <constraint firstItem="toA-XK-XHD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="242" id="cYH-PB-Udr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hPI-YW-zbR" secondAttribute="trailing" id="cfp-kX-tjK"/>
                 <constraint firstItem="4ex-dk-tRJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="115" id="iHf-e9-llt"/>
                 <constraint firstItem="toA-XK-XHD" firstAttribute="leading" secondItem="W9g-mT-qZr" secondAttribute="leading" id="mT8-4h-9H3"/>
                 <constraint firstItem="4ZN-Mb-Uae" firstAttribute="top" secondItem="qCf-qB-GOm" secondAttribute="bottom" constant="19" id="oUr-59-Q7z"/>
