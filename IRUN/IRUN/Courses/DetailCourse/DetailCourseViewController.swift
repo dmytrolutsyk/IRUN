@@ -70,6 +70,7 @@ class DetailCourseViewController: UIViewController {
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665778, longitude: 2.841284))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.666301, longitude: 2.840769))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.666353, longitude: 2.840146))
+        course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665033, longitude: 2.840410))
         self.course = course
     }
     
