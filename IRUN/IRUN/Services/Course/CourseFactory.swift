@@ -12,6 +12,7 @@ class CourseFactory {
     
     static func dictionnaryFrom(course: Course) -> [String:Any] {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ"
         var listCoordinate = [Any]()
         for coord in course.coordinates {
             var dictCoord = [String:Any]()
