@@ -52,7 +52,10 @@ class CourseFactory {
               let startDate = dateFrom(string: startDateString),
               let endDate = dateFrom(string: endDateString),
               let listOfCoordinate = dict["GPSCoordinate"] as? [Any],
-              let id = dict["_id"] as? String else { return nil }
+              let id = dict["_id"] as? String,
+              let listHumidity = dict["humidityList"] as? [Double],
+              let listPulse = dict["pulseList"] as? [Double],
+              let listTemperature = dict["tempList"] as? [Double] else { return nil }
         var GPSCoordinates = [CLLocationCoordinate2D]()
 
         for coord in listOfCoordinate {
@@ -60,7 +63,7 @@ class CourseFactory {
                   let coordinate = coordinateFrom(dict: dictCoord) else { continue }
             GPSCoordinates.append(coordinate)
         }
-        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates, listHumidity: [], listTemperature: [], listPulse: [])
+        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates, listHumidity: listHumidity, listTemperature: listTemperature, listPulse: listPulse)
     }
     
     static func coordinateFrom(dict: NSDictionary) -> CLLocationCoordinate2D? {

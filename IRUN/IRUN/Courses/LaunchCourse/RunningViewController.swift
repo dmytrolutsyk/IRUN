@@ -26,6 +26,7 @@ class RunningViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var humidityTitleLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
+    @IBOutlet var pulseLabel: UILabel!
     
     @IBOutlet var startStopButton: UIButton!
     @IBOutlet var historiqueButton: UIButton!
@@ -44,6 +45,19 @@ class RunningViewController: UIViewController, MKMapViewDelegate {
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    func getDataFromRunningService() {
+        Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) {timer in
+            guard let pulse = RunningService.shared.pulse,
+                  let humidity = RunningService.shared.humidity,
+                  let temp = RunningService.shared.temp else {
+                return
+            }
+            self.pulseLabel.text = pulse.description
+            self.humidityLabel.text = humidity.description
+            self.temperatureLabel.text = temp.description
+        }
     }
     
     @IBAction func goToHistorique(_ sender: Any) {
@@ -93,9 +107,7 @@ extension RunningViewController: CLLocationManagerDelegate {
         guard let location = userLocation.location else {
             return
         }
-        let coord = location.coordinate
         print("function update location : \(location.coordinate.latitude)")
-        self.publishLocation(coordinate: coord)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -103,6 +115,9 @@ extension RunningViewController: CLLocationManagerDelegate {
         guard let location = locations.last else {
             return
         }
-        print("other function update location : \(location.coordinate.latitude)")
+        let coord = location.coordinate
+        print("function update location : \(location.coordinate.latitude)")
+        self.publishLocation(coordinate: coord)
+        
     }
 }

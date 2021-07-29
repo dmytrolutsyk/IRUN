@@ -21,9 +21,9 @@ class RunningService {
     
     private var course: Course
     
-    private var temp: Double?
-    private var humidity: Double?
-    private var pulse: Double?
+    var temp: Double?
+    var humidity: Double?
+    var pulse: Double?
     
     private var isRunning = false
         

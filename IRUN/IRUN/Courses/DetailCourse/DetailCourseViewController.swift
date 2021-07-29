@@ -10,6 +10,9 @@ import MapKit
 
 class DetailCourseViewController: UIViewController {
 
+    @IBOutlet var pulseLabel: UILabel!
+    @IBOutlet var humidityLabel: UILabel!
+    @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     var course: Course!
     var listOfCoordinate: [CLLocationCoordinate2D] {
@@ -20,6 +23,32 @@ class DetailCourseViewController: UIViewController {
         self.mapView.delegate = self
         self.drawCourse()
         self.setRegionMap()
+        self.setAverageData()
+    }
+    
+    func setAverageData() {
+        let averageHumidity = self.getAvgHumidityFromCourseData()
+        let avgTemperature = self.getAvgTemperatureFromCourseData()
+        let avgPulse = self.getAvgPulseFromCourseData()
+        
+        self.pulseLabel.text = avgPulse.description
+        self.temperatureLabel.text = avgTemperature.description
+        self.humidityLabel.text = averageHumidity.description
+    }
+    
+    func getAvgHumidityFromCourseData() -> Double {
+        let sumData = self.course.listOfHumidity.reduce(0, +)
+        return sumData / Double(self.course.listOfHumidity.count)
+    }
+    
+    func getAvgTemperatureFromCourseData() -> Double {
+        let sumData = self.course.listOfTemperature.reduce(0, +)
+        return sumData / Double(self.course.listOfTemperature.count)
+    }
+    
+    func getAvgPulseFromCourseData() -> Double {
+        let sumData = self.course.listOfPulse.reduce(0, +)
+        return sumData / Double(self.course.listOfPulse.count)
     }
     
     static func newInstance(course: Course) -> DetailCourseViewController {
