@@ -34,6 +34,10 @@ class RunningViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goToHistorique(_ sender: Any) {
+        let home = CoursesTableViewController()
+        self.navigationController?.pushViewController(home, animated: true)
+    }
     
     @IBAction func startStopAction(_ sender: Any) {
         self.startStopRunning()

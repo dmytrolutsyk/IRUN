@@ -29,6 +29,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQM-9W-dEX">
                     <rect key="frame" x="0.0" y="582" width="414" height="30"/>
                     <state key="normal" title="Historique des courses"/>
+                    <connections>
+                        <action selector="goToHistorique:" destination="-1" eventType="touchUpInside" id="tbd-x7-eoz"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commencer une course !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxi-T0-ARB">
                     <rect key="frame" x="111.5" y="114" width="191.5" height="21"/>
@@ -97,6 +100,7 @@
                 <constraint firstItem="wQM-9W-dEX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Qg-ah-acW"/>
                 <constraint firstItem="VCn-Or-Zr7" firstAttribute="top" secondItem="UWY-XU-sex" secondAttribute="bottom" constant="25" id="8sB-Og-gOI"/>
                 <constraint firstItem="pQ0-i6-GTw" firstAttribute="top" secondItem="Vbd-F3-Blv" secondAttribute="bottom" constant="25" id="9uY-45-sAZ"/>
+                <constraint firstItem="UWY-XU-sex" firstAttribute="top" secondItem="ZxG-d3-FXZ" secondAttribute="bottom" constant="65" id="Adc-cQ-QLh"/>
                 <constraint firstItem="wQM-9W-dEX" firstAttribute="top" secondItem="pQ0-i6-GTw" secondAttribute="bottom" constant="50" id="Beu-Je-YRy"/>
                 <constraint firstItem="UJI-F7-XNI" firstAttribute="leading" secondItem="VCn-Or-Zr7" secondAttribute="trailing" constant="10" id="DdR-0c-Df2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wQM-9W-dEX" secondAttribute="trailing" id="FkS-Xc-VrT"/>
@@ -106,6 +110,7 @@
                 <constraint firstItem="wQM-9W-dEX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sr8-PR-P9E"/>
                 <constraint firstItem="9f9-WI-4yP" firstAttribute="leading" secondItem="UWY-XU-sex" secondAttribute="trailing" constant="10" id="W4a-hj-lcF"/>
                 <constraint firstItem="ZxG-d3-FXZ" firstAttribute="top" secondItem="rxi-T0-ARB" secondAttribute="bottom" constant="125" id="Za4-JR-EZe"/>
+                <constraint firstItem="Vbd-F3-Blv" firstAttribute="top" secondItem="ZxG-d3-FXZ" secondAttribute="bottom" constant="65" id="ejw-ba-7ws"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wQM-9W-dEX" secondAttribute="bottom" constant="250" id="fWb-AE-Byg"/>
                 <constraint firstItem="UWY-XU-sex" firstAttribute="leading" secondItem="Vbd-F3-Blv" secondAttribute="trailing" constant="25" id="h1L-Xa-FpD"/>
                 <constraint firstItem="wQM-9W-dEX" firstAttribute="top" secondItem="VCn-Or-Zr7" secondAttribute="bottom" constant="50" id="iQs-PT-6JW"/>
@@ -114,6 +119,7 @@
                 <constraint firstItem="Vbd-F3-Blv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="125" id="qOD-lG-hOw"/>
                 <constraint firstItem="rxi-T0-ARB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wYh-V8-6eh"/>
                 <constraint firstItem="ZxG-d3-FXZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="xHh-Ti-WeJ"/>
+                <constraint firstItem="9f9-WI-4yP" firstAttribute="top" secondItem="ZxG-d3-FXZ" secondAttribute="bottom" constant="65" id="y31-aj-85u"/>
             </constraints>
             <point key="canvasLocation" x="115.94202898550725" y="81.696428571428569"/>
         </view>
