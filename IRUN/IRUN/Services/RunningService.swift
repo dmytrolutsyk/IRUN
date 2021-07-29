@@ -53,6 +53,7 @@ class RunningService {
         self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.846906, longitude: 2.383022))
         self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.847468, longitude: 2.387146))
         self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.849333, longitude: 2.389509))
+        self.course.coordinates.append(CLLocationCoordinate2D(latitude: 48.848667, longitude: 2.395196))
 
     }
     
@@ -79,7 +80,7 @@ class RunningService {
     private func remplissageHumidityEveryMinute() {
         Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) {timer in
             if self.isRunning {
-                guard let humidity = self.temp else {
+                guard let humidity = self.humidity else {
                     print("no humidity available")
                     return
                 }
