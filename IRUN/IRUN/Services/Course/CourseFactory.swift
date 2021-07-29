@@ -11,6 +11,7 @@ import MapKit
 class CourseFactory {
     
     static func dictionnaryFrom(course: Course) -> [String:Any] {
+        let dateFormatter = DateFormatter()
         var listCoordinate = [Any]()
         for coord in course.coordinates {
             var dictCoord = [String:Any]()
@@ -22,8 +23,8 @@ class CourseFactory {
             "runTime" : course.duration,
             "GPSCoordinate": listCoordinate,
             "runDistance": 25,
-            "startDate": course.startDate,
-            "endDate": course.endDate,
+            "startDate": dateFormatter.string(from: course.startDate),
+            "endDate": dateFormatter.string(from: course.endDate),
             "tempList": course.listOfTemperature,
             "humidityList": course.listOfHumidity,
             "pulseList": course.listOfPulse
