@@ -11,6 +11,8 @@ import MapKit
 class CourseFactory {
     
     static func dictionnaryFrom(course: Course) -> [String:Any] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ"
         var listCoordinate = [Any]()
         for coord in course.coordinates {
             var dictCoord = [String:Any]()
@@ -21,7 +23,12 @@ class CourseFactory {
         return [
             "runTime" : course.duration,
             "GPSCoordinate": listCoordinate,
-            "runDistance": 25
+            "runDistance": 25,
+            "startDate": dateFormatter.string(from: course.startDate),
+            "endDate": dateFormatter.string(from: course.endDate),
+            "tempList": course.listOfTemperature,
+            "humidityList": course.listOfHumidity,
+            "pulseList": course.listOfPulse
         ]
     }
     
@@ -53,7 +60,7 @@ class CourseFactory {
                   let coordinate = coordinateFrom(dict: dictCoord) else { continue }
             GPSCoordinates.append(coordinate)
         }
-        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates)
+        return Course(_id: id, duration: runTime, startDate: startDate, endDate: endDate, coordinates: GPSCoordinates, listHumidity: [], listTemperature: [], listPulse: [])
     }
     
     static func coordinateFrom(dict: NSDictionary) -> CLLocationCoordinate2D? {

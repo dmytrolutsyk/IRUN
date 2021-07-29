@@ -18,7 +18,6 @@ class DetailCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
-        self.mockData()
         self.drawCourse()
         self.setRegionMap()
     }
@@ -35,7 +34,7 @@ class DetailCourseViewController: UIViewController {
     }
     
     private func mockData() {
-        let course = Course(_id: "0", duration: 26, startDate: Date(), endDate: Date(), coordinates: [])
+        let course = Course(_id: "0", duration: 26, startDate: Date(), endDate: Date(), coordinates: [], listHumidity: [], listTemperature: [], listPulse: [])
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665033, longitude: 2.840410))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665007, longitude: 2.840899))
         course.coordinates.append(CLLocationCoordinate2D(latitude: 48.665297, longitude: 2.841232))

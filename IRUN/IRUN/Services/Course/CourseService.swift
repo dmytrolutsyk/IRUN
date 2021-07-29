@@ -49,7 +49,8 @@ class CourseService {
         request.setValue("application/json", forHTTPHeaderField: "content-type")
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, res, err) in
             if let httpRes = res as? HTTPURLResponse {
-                completion(httpRes.statusCode == 201)
+                print("statuscode = \(httpRes.statusCode)")
+                completion(httpRes.statusCode == 200)
                 return
             }
             completion(false)

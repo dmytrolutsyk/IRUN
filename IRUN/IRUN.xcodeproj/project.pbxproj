@@ -35,6 +35,9 @@
 		CF03630826AB9FED00154F39 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF03630626AB9FED00154F39 /* CourseTableViewCell.xib */; };
 		CF164D8526ABACC00092B7FC /* CoursesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF164D8326ABACC00092B7FC /* CoursesTableViewController.xib */; };
 		CF164D8826ABAD140092B7FC /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF164D8226ABACC00092B7FC /* CoursesTableViewController.swift */; };
+		CF5A57BF26B208CC006FC6F1 /* RunningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A57BE26B208CC006FC6F1 /* RunningService.swift */; };
+		CF5A57C426B212C6006FC6F1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5A57C226B212C6006FC6F1 /* RunningViewController.swift */; };
+		CF5A57C526B212C6006FC6F1 /* RunningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5A57C326B212C6006FC6F1 /* RunningViewController.xib */; };
 		CF6257D2269F954700CF4736 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6257D1269F954700CF4736 /* SessionData.swift */; };
 		CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */; };
 		CF98B5F826A76BCF0021CFA3 /* DetailCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */; };
@@ -71,6 +74,9 @@
 		CF03630626AB9FED00154F39 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
 		CF164D8226ABACC00092B7FC /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		CF164D8326ABACC00092B7FC /* CoursesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesTableViewController.xib; sourceTree = "<group>"; };
+		CF5A57BE26B208CC006FC6F1 /* RunningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningService.swift; sourceTree = "<group>"; };
+		CF5A57C226B212C6006FC6F1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
+		CF5A57C326B212C6006FC6F1 /* RunningViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningViewController.xib; sourceTree = "<group>"; };
 		CF6257D1269F954700CF4736 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 		CF98B5F526A76BCF0021CFA3 /* DetailCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCourseViewController.swift; sourceTree = "<group>"; };
 		CF98B5F626A76BCF0021CFA3 /* DetailCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCourseViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		30B4951F269E3C33002B96EE /* Courses */ = {
 			isa = PBXGroup;
 			children = (
+				CF5A57C126B212B3006FC6F1 /* LaunchCourse */,
 				CF03630426AB9FA500154F39 /* DetailCourse */,
 				CF03630326AB9F9900154F39 /* ListCourses */,
 			);
@@ -237,12 +244,22 @@
 			path = DetailCourse;
 			sourceTree = "<group>";
 		};
+		CF5A57C126B212B3006FC6F1 /* LaunchCourse */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A57C226B212C6006FC6F1 /* RunningViewController.swift */,
+				CF5A57C326B212C6006FC6F1 /* RunningViewController.xib */,
+			);
+			path = LaunchCourse;
+			sourceTree = "<group>";
+		};
 		CF6257D0269F953A00CF4736 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				CF0362FD26AB91A200154F39 /* Course */,
 				CF0362FC26AB919D00154F39 /* User */,
 				CF6257D1269F954700CF4736 /* SessionData.swift */,
+				CF5A57BE26B208CC006FC6F1 /* RunningService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F7490B265D8C2900E8B04A /* LaunchScreen.storyboard in Resources */,
+				CF5A57C526B212C6006FC6F1 /* RunningViewController.xib in Resources */,
 				30F74908265D8C2900E8B04A /* Assets.xcassets in Resources */,
 				30A0D2BD269CD94A00ED9FB1 /* LoginViewController.xib in Resources */,
 				30F74915265D8D8600E8B04A /* HomeViewController.xib in Resources */,
@@ -331,6 +349,7 @@
 				CF0362FF26AB91B800154F39 /* CourseService.swift in Sources */,
 				30D1A1B1265DA32800F65B63 /* BTUUIDs.swift in Sources */,
 				CF6257D2269F954700CF4736 /* SessionData.swift in Sources */,
+				CF5A57C426B212C6006FC6F1 /* RunningViewController.swift in Sources */,
 				30D1A1B3265DA35A00F65B63 /* BTUtils.swift in Sources */,
 				30C97D912693206E0008F2C1 /* DevicesTableViewController.swift in Sources */,
 				30B49521269E3C56002B96EE /* Course.swift in Sources */,
@@ -340,6 +359,7 @@
 				30F74906265D8C2600E8B04A /* IRUN.xcdatamodeld in Sources */,
 				30A0D2C6269CE14C00ED9FB1 /* UserFactory.swift in Sources */,
 				30C97D84269314860008F2C1 /* CellTableViewCell.swift in Sources */,
+				CF5A57BF26B208CC006FC6F1 /* RunningService.swift in Sources */,
 				30A0D2C8269CE16900ED9FB1 /* UserService.swift in Sources */,
 				CF98B5F726A76BCF0021CFA3 /* DetailCourseViewController.swift in Sources */,
 				30F74914265D8D8600E8B04A /* HomeViewController.swift in Sources */,

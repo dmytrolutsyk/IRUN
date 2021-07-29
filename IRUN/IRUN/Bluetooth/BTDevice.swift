@@ -80,7 +80,7 @@ extension BTDevice {
 extension BTDevice: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        print("Device: discovered services")
+        //print("Device: discovered services")
         peripheral.services?.forEach {
             print("  \($0)")
             if $0.uuid == BTUUIDs.infoService {
@@ -99,7 +99,7 @@ extension BTDevice: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        print("Device: discovered characteristics")
+        //print("Device: discovered characteristics")
         service.characteristics?.forEach {
             print("   \($0)")
             
@@ -124,27 +124,27 @@ extension BTDevice: CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        print("Device: updated value for \(characteristic)")
+        //print("Device: updated value for \(characteristic)")
         
         if characteristic.uuid == BTUUIDs.espTMP, let d = characteristic.value {
             tmp = String(data: d, encoding: .utf8)
             if let tmp = tmp {
                 delegate?.deviceDataTMPChanged(value: tmp)
-                print("ESP TEMP: \(tmp)")
+                //print("ESP TEMP: \(tmp)")
             }
         }
         if characteristic.uuid == BTUUIDs.espPULSE, let d = characteristic.value {
             pulse = String(data: d, encoding: .utf8)
             if let pulse = pulse {
                 delegate?.deviceDataPULSEChanged(value: pulse)
-                print("ESP PULSE: \(pulse)")
+                //print("ESP PULSE: \(pulse)")
             }
         }
         if characteristic.uuid == BTUUIDs.espHUM, let d = characteristic.value {
             hum = String(data: d, encoding: .utf8)
             if let hum = hum {
                 delegate?.deviceDataHUMChanged(value: hum)
-                print("ESP HUM: \(hum)")
+                //print("ESP HUM: \(hum)")
             }
         }
         if characteristic.uuid == BTUUIDs.infoSerial, let d = characteristic.value {
