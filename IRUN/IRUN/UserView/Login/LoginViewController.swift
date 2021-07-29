@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.userService.login(user: user) { (success) in
                 if success {
                     print("success login will naviguate to Home")
-                    let home = RunningViewController()
+                    let home = DevicesTableViewController()
                     self.navigationController?.pushViewController(home, animated: true)
                 } else { self.showPopUpErrorLogin() }
             }
